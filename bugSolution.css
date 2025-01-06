@@ -1,0 +1,12 @@
+The solution is to refactor the CSS to ensure the correct specificity order. The ID selector should always override the class selector due to higher specificity.
+
+```css
+#myElement {
+  background-color: red;
+}
+
+.myClass {
+  background-color: blue;
+}
+/* Remove conflicting style for myElement.myClass */
+```
