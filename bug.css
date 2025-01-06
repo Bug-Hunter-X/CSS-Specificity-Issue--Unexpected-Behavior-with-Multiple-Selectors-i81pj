@@ -1,0 +1,15 @@
+The following CSS code snippet demonstrates an uncommon bug related to the specificity of CSS selectors.  The `#myElement` selector is more specific than `.myClass`, so the background color should be set to red. However, due to an unexpected order of selector application, the background may still appear blue.
+
+```css
+#myElement {
+  background-color: red;
+}
+
+.myClass {
+  background-color: blue;
+}
+
+#myElement.myClass {
+  background-color: green; /*This should not be applied due to specificity*/
+}
+```
